@@ -4,10 +4,11 @@ img{
 	width: 270px;
 }
 .card{
-	margin-bottom: 10px;
+	margin: 10px;
 }
 .jumbotron{
-	background-color: darkslategrey;/* url('../../assets/thali.jpg'); */
+	/* background-color: darkslategrey;url('../../assets/thali.jpg'); */
+	background-image: linear-gradient(to right, #424242 , white);
 	height: 200px;
 	background-position: center;
 	background-repeat: no-repeat;
