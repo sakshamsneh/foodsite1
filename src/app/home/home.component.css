@@ -1,0 +1,18 @@
+img{
+	margin: 10px;
+	height: 270px;
+	width: 270px;
+}
+.card{
+	margin-bottom: 10px;
+}
+.jumbotron{
+	background-color: darkslategrey;/* url('../../assets/thali.jpg'); */
+	height: 200px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.header{
+	color: white;
+}
