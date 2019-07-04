@@ -17,3 +17,6 @@ img{
 .header{
 	color: white;
 }
+.card-footer{
+	bottom: 5px;
+}
