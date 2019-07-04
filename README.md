@@ -8,3 +8,6 @@ Run `npm install` for getting the node_modules.
 
 ##Step2
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Realtime version
+Goto `https://sakshamsneh.github.io/foodsite1/home`
