@@ -7,14 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
-import { Routes, RouterModule } from '@angular/router';
-
-const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-];
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +15,12 @@ const routes: Routes = [
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]
