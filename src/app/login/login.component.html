@@ -3,15 +3,23 @@
     <h1 align="center">LOGIN HERE</h1>
   </div>
 </div>
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1" class="bmd-label-floating">Email address (two help blocks)</label>
-    <input type="email" class="form-control" id="exampleInputEmail1">
-    <span class="bmd-help">We'll never share your email with anyone else.</span>
-    <span class="bmd-help">And this is probably from a second plugin showing in a non-optimal way</span>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1" class="bmd-label-floating">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>  
-</form>
+<div class="container">
+	<form class="form-horizontal">
+    <div class="form-group row bmd-form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group row bmd-form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+		<br>
+		<div class="form-group">
+			<div class="col-xs-offset-3 col-xs-9">
+				<input type="submit" class="btn btn-raised btn-primary" value="Submit">
+				<input type="reset" class="btn btn-default" value="Reset">
+				<a routerLink="/signup" type="signup" class="btn btn-info float-right" value="Signup">Signup</a>
+			</div>
+		</div>
+  </form>
+</div>
