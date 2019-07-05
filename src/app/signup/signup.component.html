@@ -6,24 +6,20 @@
 <div class="container">
 	<form>
 		<div class="form-row">
-			<div class="form-group col-md-6">
-				<label for="inputFName" class="bmd-label-floating">First Name</label>
-				<input type="text" class="form-control" id="inputFName">
-			</div>
-			<div class="form-group col-md-6">
-				<label for="inputLName" class="bmd-label-floating">Last Name</label>
-				<input type="text" class="form-control" id="inputLName">
+			<div class="form-group col-md-12">
+				<label for="inputName" class="bmd-label-floating">Name</label>
+				<input type="text" class="form-control" id="inputName">
 			</div>
 		</div>
 		<div class="form-row">
 			<div class="form-group col-md-6">
-				<label for="inputEmail4" class="bmd-label-floating">Email</label>
-				<input type="email" class="form-control" id="inputEmail4">
+				<label for="inputEmail" class="bmd-label-floating">Email</label>
+				<input type="email" class="form-control" id="inputEmail">
 				<span class="bmd-help">We'll never share your email with anyone else.</span>
 			</div>
 			<div class="form-group col-md-6">
-				<label for="inputPassword4" class="bmd-label-floating">Password</label>
-				<input type="password" class="form-control" id="inputPassword4">
+				<label for="inputPassword" class="bmd-label-floating">Password</label>
+				<input type="password" class="form-control" id="inputPassword">
 				<span class="bmd-help">Enter 8-14 characters.</span>
 			</div>
 		</div>
@@ -31,9 +27,50 @@
 			<label for="inputAddress" class="bmd-label-floating">Address</label>
 			<input type="text" class="form-control" id="inputAddress">
 		</div>
-		<div class="form-group">
-			<label for="inputAddress2" class="bmd-label-floating">Address 2</label>
-			<input type="text" class="form-control" id="inputAddress2">
+		<div class="form-row">
+			<div class="form-group col-md-4">
+				<label for="inputCity" class="bmd-label-floating">City</label>
+				<input type="text" class="form-control" id="inputCity">
+			</div>
+			<div class="form-group col-md-4">
+				<label for="inputPCode" class="bmd-label-floating">Pincode</label>
+				<input type="text" class="form-control" id="inputPCode">
+			</div>
+			<div class="form-group col-md-4">
+				<label for="inputState" class="bmd-label-floating">State</label>
+				<input type="text" class="form-control" id="inputState">
+			</div>
+		</div>
+		<div class="input-group">
+			<div class="checkbox">
+				<label><input type="checkbox">
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">T&C</button>
+					<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLongTitle">T&C</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+								Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+								Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+								Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+								Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+								Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+								Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+								Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</label>
+			</div>
 		</div>
 		<div class="form-group">
 			<button type="button" class="btn btn-raised btn-primary" data-toggle="snackbar" data-content="SUCCESSFUL! <a href='/login' class='btn btn-info'>LOGIN FROM HERE!</a>" data-html-allowed="true" data-timeout="0">
