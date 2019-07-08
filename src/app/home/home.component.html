@@ -11,9 +11,22 @@
 	  <div class="card-body">
 		<h5 class="card-title">{{f.title}}</h5>
 		<p class="card-text">{{f.desc}}...</p>
-		<div class="card-footer" align="center" style="color:black">
-			<b>{{f.cost | currency:'INR'}}</b>
-			<a href="#" class="btn btn-primary">Add to Cart</a>
+    <div class="card-footer" style="color:black">
+      <div class="container">
+        <div class="row">
+          <div class="col-4" id="cost" style="font-size: 15px">
+            <b>{{f.cost | currency:'INR'}}</b>
+          </div>
+          <div class="col-4">
+            <form class="form-horizontal">
+              <input type="number" class="form-control" id="orderc" style="width: 5;" min=0 max={{f.count}}>
+            </form>
+          </div>
+          <div class="col-4">
+            <a href="#" class="btn btn-xs btn-primary">Add</a>
+          </div>
+        </div>
+      </div>
 		</div>
 	  </div>
 	 </div>

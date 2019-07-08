@@ -30,8 +30,7 @@ export class UpfdComponent implements OnInit {
         res => {
           this.getFood();
           form.reset();
-        }
-        );
+        });
       } else {
         this.upfdservice.updateFood(form.value).subscribe(
           res => {
