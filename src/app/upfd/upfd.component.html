@@ -1,0 +1,30 @@
+<div class="container">
+	<br><h3 align="center">FOOD FORM</h3>
+	<form #upfdForm='ngForm' (ngSubmit)="onSubmit(upfdForm)">
+		<input class="form-control" type="hidden" name="_id" #_id="ngModel" [(ngModel)]="upfdservice.selectedFood._id">
+		<input class="form-control" type="text" name="title" #title="ngModel" [(ngModel)]="upfdservice.selectedFood.title" placeholder="NAME"><br>
+		<input class="form-control" type="text" name="desc" #desc="ngModel" [(ngModel)]="upfdservice.selectedFood.desc" placeholder="DESCRIPTION"><br>
+		<input class="form-control" type="text" name="cost" #cost="ngModel" [(ngModel)]="upfdservice.selectedFood.cost" placeholder="COST"><br>
+		<input class="form-control" type="number" name="count" #count="ngModel" [(ngModel)]="upfdservice.selectedFood.count" placeholder="COUNT"><br>
+		<button type="submit" class="btn btn-raised btn-primary">SUBMIT</button>
+		<button type="reset" class="btn btn-default">RESET</button>
+	</form>
+	<br><h3 align="center">RESULT</h3>
+	<table class="table">
+		<thead class="thead-dark" align="center">
+			<tr><th>TITLE</th><th>DESCRIPTION</th><th>COST</th><th>COUNT</th><th>OPTIONS</th></tr>
+		</thead>
+		<tr *ngFor='let f of upfdservice.foods'>
+			<td>{{f.title}}</td>
+			<td>{{f.desc}}</td>
+			<td>{{f.cost | currency:'INR'}}</td>
+			<td>{{f.count}}</td>
+			<td style="width:100px">
+				<div class="btn-group" role="group" aria-label="options">
+					<button class="btn btn-dark btn-raised" (click)="fUpdate(f)">EDIT</button>
+					<button class="btn btn-danger btn-raised" (click)="fDelete(f._id)">DELETE</button>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>

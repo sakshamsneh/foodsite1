@@ -1,12 +1,9 @@
 const express = require('express');
-const multer = require('multer');
 var router = express.Router();
 const fs = require('fs');
 var ObjectId = require('mongoose').Types.ObjectId;
 
 var { Food } = require('../models/food');
-var DIR = '../src/assets/foodimg/';
-var upload = multer({dest: DIR}).single('photo');
 
 router.get('/', (req, res) => {
     Food.find((err, docs) => {
@@ -27,23 +24,12 @@ router.get('/:id', (req, res) => {
 
 //{"title":"Dosa","desc":"A dosa is a cooked flat thin layered rice batter, originating from the Indian subcontinent, made from a fermented batter","cost":35,"count":5}
 router.post('/', (req, res) => {
-	var path = '';
 	var fd = new Food({
 		title: req.body.title,
         desc: req.body.desc,
         cost: req.body.cost,
         count: req.body.count,
     });
-	fd.img.data= fs.readFileSync(req.files.img.path);
-	fd.img.contentType = 'image/jpg';
-	upload(req, res, function (err) {
-		if (err) {
-			console.log(err);
-			return res.status(422).send("an Error occured");
-		}
-		path = req.file.path;
-		return res.send("Upload Completed for "+path);
-	});
     fd.save((err, doc) => {
         if (!err) { res.send(doc); }
         else { console.log('Error in Food Save :' + JSON.stringify(err, undefined, 2)); }
@@ -52,7 +38,6 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
     if (!ObjectId.isValid(req.params.id))
         return res.status(400).send(`No record with given id : ${req.params.id}`);
-
     var fd = {
         title: req.body.title,
         desc: req.body.desc,
