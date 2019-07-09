@@ -28,14 +28,14 @@ export class UpfdComponent implements OnInit {
     if (form.value._id === '') {
       this.upfdservice.postFood(form.value).subscribe(
         res => {
-          this.getFood();
           form.reset();
+          this.getFood();
         });
       } else {
         this.upfdservice.updateFood(form.value).subscribe(
           res => {
-            this.getFood();
             form.reset();
+            this.getFood();
         }
       );
     }

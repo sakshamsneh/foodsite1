@@ -18,5 +18,11 @@ img{
 	color: white;
 }
 .card-footer{
-	bottom: 5px;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  height: 2.5rem;
+  width: 90%;
+  position: absolute;
+  height: 60px;
 }
